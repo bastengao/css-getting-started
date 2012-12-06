@@ -19,10 +19,13 @@
     <link rel="stylesheet" href="assets/deckjs/e42bd/extensions/scale/deck.scale.css">
 
     <!-- Style theme. More available in /themes/style/ or create your own. -->
-    <link rel="stylesheet" href="assets/deckjs/e42bd/themes/style/web-2.0.css">
+    <link rel="stylesheet" href="assets/deckjs/e42bd/themes/style/neon.css">
 
     <!-- Transition theme. More available in /themes/transition/ or create your own. -->
     <link rel="stylesheet" href="assets/deckjs/e42bd/themes/transition/horizontal-slide.css">
+
+
+    <link rel="stylesheet" href="assets/highlight/7.3/styles/sunburst.css">
 
     <!-- Required Modernizr file -->
     <script src="assets/deckjs/e42bd/modernizr.custom.js"></script>
@@ -46,6 +49,10 @@
 
     <div class="slide">
         <h2>未完待续</h2>
+        <pre class="highlight"><code id="css-code" class="css"></code></pre>
+<pre style="display: none;" data-code-for="css-code">.red {
+    color: red;
+}</pre>
     </div>
 
 
@@ -84,9 +91,21 @@
 <script src="assets/deckjs/e42bd/extensions/navigation/deck.navigation.js"></script>
 <script src="assets/deckjs/e42bd/extensions/scale/deck.scale.js"></script>
 
+<script type="text/javascript" src="assets/highlight/7.3/highlight.pack.js"></script>
+
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
     $(function () {
+        //将 pre 中的代码，放到 data-code-for 对应的 id 的元素中
+        $("pre[data-code-for]").each(function (ele) {
+            var $pre = $(this);
+            var id = $pre.attr("data-code-for");
+            $("#" + id).text($pre.text());
+        });
+
+        hljs.tabReplace = '    ';
+        hljs.initHighlightingOnLoad();
+
         $.deck('.slide');
     });
 </script>
