@@ -22,4 +22,10 @@ body {
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* 去掉 web2.0 中的字体阴影 */
+.deck-container > .slide code {
+    text-shadow: none;
 }

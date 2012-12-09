@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=1024, user-scalable=no">
     <title>CSS 入门教程</title>
 
-    <link rel="stylesheet" href="css/layout.css">
     <!-- Required stylesheet -->
     <link rel="stylesheet" href="assets/deckjs/e42bd/core/deck.core.css">
 
@@ -19,13 +18,16 @@
     <link rel="stylesheet" href="assets/deckjs/e42bd/extensions/scale/deck.scale.css">
 
     <!-- Style theme. More available in /themes/style/ or create your own. -->
-    <link rel="stylesheet" href="assets/deckjs/e42bd/themes/style/neon.css">
+    <link rel="stylesheet" href="assets/deckjs/e42bd/themes/style/web-2.0.css">
 
     <!-- Transition theme. More available in /themes/transition/ or create your own. -->
     <link rel="stylesheet" href="assets/deckjs/e42bd/themes/transition/horizontal-slide.css">
 
 
     <link rel="stylesheet" href="assets/highlight/7.3/styles/sunburst.css">
+
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="http://bastengao.github.com/common-css/common.css">
 
     <!-- Required Modernizr file -->
     <script src="assets/deckjs/e42bd/modernizr.custom.js"></script>
@@ -35,10 +37,68 @@
 <article class="deck-container boxshadow" style="width:900px;">
     <div class="slide">
         <h1>CSS 入门教程</h1>
+
+        <p class="p-a" style="right: 0;bottom: 0;">
+            bastengao(<a target="_blank" href="http://weibo.com/bastengao">weibo</a>
+            /
+            <a target="_blank" href="https://github.com/bastengao">github</a>)
+        </p>
     </div>
 
     <div class="slide">
-        <h2>内容/agenda</h2>
+        <h2>使用</h2>
+
+        <h3>style</h3>
+
+        <pre><code id="usage-style" class="xml"></code></pre>
+        <pre class="hide" data-code-for="usage-style">
+&lt;head&gt;
+    &lt;title&gt;页面内使用&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+        .color-red {
+            color: red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class="color-red"&gt;ruby&lt;/p&gt;
+&lt;/body&gt;</pre>
+    </div>
+
+    <div class="slide">
+        <h2>使用</h2>
+
+        <h3>link</h3>
+        <span>my.css</span>
+        <pre><code id="usage-link-css" class="css"></code></pre>
+        <pre class="hide" data-code-for="usage-link-css">
+.red-color{
+    color: red;
+}</pre>
+        <span>my.html</span>
+        <pre><code id="usage-link-html" class="html"></code></pre>
+        <pre class="hide" data-code-for="usage-link-html">
+&lt;head&gt;
+    &lt;title&gt;
+    &lt;link rel="stylesheet" href="my.css"&gt;
+&lt;body&gt;
+    &lt;p class="color-red"&gt;ruby&lt;/p&gt;</pre>
+    </div>
+
+    <div class="slide">
+        <h2>选择器</h2>
+        <ul>
+            <li>标签</li>
+            <li>类</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>优先级</h2>
+    </div>
+
+    <div class="slide">
+        <h2>提纲/agenda</h2>
         <ul>
             <li class="slide">盒子模型/box model</li>
             <li class="slide">块/block</li>
@@ -49,10 +109,25 @@
 
     <div class="slide">
         <h2>未完待续</h2>
-        <pre class="highlight"><code id="css-code" class="css"></code></pre>
-<pre style="display: none;" data-code-for="css-code">.red {
+        <pre class="highlight"><code id="css-code" class="css" style="font-size: 1.5em;"></code></pre>
+<pre style="display: none;" data-code-for="css-code">
+.red {
     color: red;
 }</pre>
+    </div>
+
+    <div class="slide">
+        <h2>布局</h2>
+        <ul>
+            <li>格子(column)</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>CSS框架</h2>
+        <ul>
+            <li>Bootstrap</li>
+        </ul>
     </div>
 
 
